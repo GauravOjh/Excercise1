@@ -1,0 +1,6 @@
+<div>
+    <h1 [textContent]="header"></h1>
+    <input type="text" [(ngModel)]="inputData" (input)="inputManipulation($event)">
+    <p>{{inputData}}</p>
+    <button [disabled]="isDisabled" (click)="checkform()">Check Form</button>
+</div>

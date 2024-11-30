@@ -1,0 +1,52 @@
+<div class="main">
+    <div>
+        <div>
+            <button class="num" [ngClass]="{
+                'active-btn': chooseNum===2
+            }"
+            (click)="calculate(2)"
+            >
+                Number is Divisible by 2
+            </button>
+        </div>
+        <div style="margin-top: 10px;">
+            <button class="num" [ngClass]="{
+                'active-btn': chooseNum===3
+            }"
+            (click)="calculate(3)"
+            >
+                Number is Divisible by 3
+            </button>
+        </div>
+        <div style="margin-top: 10px;">
+            <button class="num" [ngClass]="{
+                'active-btn': chooseNum===5
+            }"
+            (click)="calculate(5)"
+            >
+                Number is Divisible by 5
+            </button>
+        </div>
+        <div style="margin: 10px;">
+            <button class="numclear" [disabled]="isclearDisabled" (click)="calculate(1)">Clear Here</button>
+        </div>
+    </div>
+    
+    <div>
+        <div class="st" *ngFor="let num of numbers"
+        [ngClass]="{
+            highlight : num%chooseNum===0 && chooseNum>1
+        }"
+        >
+            {{num}}
+        </div>
+    </div>
+    <div style="position: relative;
+    top: 150px;
+    right: 520px;
+    color: brown;
+    font-size: 30px;
+    font-weight: bold;" *ngIf="chooseNum>1">
+        Number is Divisible by {{chooseNum}}
+    </div>
+</div>

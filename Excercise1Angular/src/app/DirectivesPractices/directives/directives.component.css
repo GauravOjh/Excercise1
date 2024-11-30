@@ -1,0 +1,46 @@
+.highlight {
+    color: red;
+    background-color: #818910;
+}
+
+.active-btn {
+    background-color: #8db7d9;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 590px;
+    position: absolute;
+}
+
+.num {
+    border: 5px solid red;
+    border-radius: 10px;
+    height: 45px;
+    width: auto;
+}
+
+.numclear{
+    border: 5px solid rgb(70, 32, 17);
+    border-radius: 10px;
+    height: 45px;
+    width: auto;
+}
+
+.st{
+    display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.Styword{
+    position: relative;
+    top: 150px;
+    right: 520px;
+}

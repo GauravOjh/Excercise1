@@ -1,0 +1,21 @@
+<div class="parent">
+    <div>
+        <button class="parentbutton" (click)="onbuttonClick('color')">Colors</button>
+    </div>
+    <div>
+        <button class="parentbutton" (click)="onbuttonClick('fruit')">Fruits</button>
+    </div>
+    <div>
+        <button class="parentbutton" (click)="onbuttonClick('animal')">Animals</button>
+    </div>
+    <div class="output">
+        <div *ngIf="selectedItem">Selected Item is {{selectedItem?.name}}</div>
+    </div>
+</div>
+<hr>
+
+<app-child
+[items]="filteredItems"
+(selectedItemEmitter)="selectItem($event)"
+></app-child>
+

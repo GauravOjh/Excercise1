@@ -1,12 +1,14 @@
 <div>
     <div>
         <div>
-            <select id="shape" (change)="selectShape($event)">
+            <select id="shape" name="shape" [(ngModel)]="shape">
+                <option value="">Select Shape</option>
                 <option value="circle">Circle</option>
                 <option value="rectangle">Rectangle</option>
                 <option value="square">Square</option>
             </select>
-            <select id="colors" (change)="selectColor($event)">
+            <select id="color" name="color" [(ngModel)]="color">
+                <option value="">Select Color</option>
                 <option value="red">Red</option>
                 <option value="green">Green</option>
                 <option value="blue">Blue</option>

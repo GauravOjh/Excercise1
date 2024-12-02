@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { SharedService } from '../shared.service';
 import { SecondcomponentComponent } from "../secondcomponent/secondcomponent.component";
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-firstcomponent',
   standalone: true,
-  imports: [SecondcomponentComponent],
+  imports: [SecondcomponentComponent,FormsModule,CommonModule],
   templateUrl: './firstcomponent.component.html',
   styleUrl: './firstcomponent.component.css'
 })
@@ -14,12 +16,6 @@ export class FirstcomponentComponent {
   shape='';
   color='';
   shapeClass= '';
-  selectColor(color:any){
-    this.color= color.target.value;
-  }
-  selectShape(shape:any){
-    this.shape = shape.target.value;
-  }
 
   selectshapeandColor(){
     this.shapeClass = this.sharedService.shape(this.shape,this.color);

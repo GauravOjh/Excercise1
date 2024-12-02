@@ -1,0 +1,26 @@
+<div>
+    <div>
+        <div>
+            <select id="shape" (change)="selectShape($event)">
+                <option value="circle">Circle</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="square">Square</option>
+            </select>
+            <select id="colors" (change)="selectColor($event)">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+            </select>
+        </div>
+        <div>
+            <button (click)="selectshapeandColor()">draw</button>
+        </div>
+
+        <div class="shape {{shapeClass}}"> 
+           
+        </div>
+    </div>
+    <div>
+        <app-secondcomponent></app-secondcomponent>
+    </div>
+</div>

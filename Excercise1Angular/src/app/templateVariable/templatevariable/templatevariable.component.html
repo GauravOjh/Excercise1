@@ -1,0 +1,15 @@
+
+<div style="margin:auto 630px;">
+    <div>
+        <h1 #honeheader></h1>
+    </div>
+
+    <input type="text" #inputdata (input)="checklength(inputdata.value)">
+    <span style="display: flex; margin:auto 65px;">Results</span>
+    <span style="display:flex; margin-top:10px;" *ngIf="inputlength>0">number of character is {{inputlength}}</span>
+
+    <div *ngIf="inputlength>0" style="display: flex; margin:auto 65px;">
+        <h5>Vowels</h5>
+        <div *ngFor="let vowel of vowels">{{ vowel.letter }}: {{ vowel.count }}</div>
+    </div>
+</div>
